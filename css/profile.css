@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.profile-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    display: flex;
+    align-items: center; /* Выравнивание элементов по центру вертикали */
+    flex-direction: column; /* Добавленный стиль для вертикального выравнивания */
+}
+
+#profilePicture {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 20px; /* Отступ снизу */
+    overflow: hidden;
+}
+
+#profilePicture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Квадратные рамки */
+}
+
+.profile-info {
+    text-align: center; /* Выравнивание текста по центру */
+    flex-grow: 1;
+}
+
+.profile-info h2,
+.profile-info button {
+    margin-bottom: 20px; /* Отступ снизу для элементов "User Profile" и "Log Out" */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

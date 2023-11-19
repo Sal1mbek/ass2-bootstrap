@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisker Karma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.jpg">
+    <script>
+        alert("Welcome to Fisker Karma!");
+    </script>   
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">        
+        <h1 class="display-4 text-uppercase" onclick="showAlert()">Welcome to Fisker</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item text-uppercase fa-solid">
+                    <a class="nav-link" href="main_pageg.html">Home</a>
+                </li>
+                <li class="nav-item text-uppercase fa-solid">
+                    <a class="nav-link" href="modelsg.html">Models</a>
+                </li>
+                <li class="nav-item text-uppercase fa-solid">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item text-uppercase fa-solid">
+                    <a class="nav-link" href="#Contact">Contact</a>
+                </li>
+                <li class="nav-item text-uppercase fa-solid">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="py-5 text-center">
+        <h2 class="display-5">Discover the Future of Electric Luxury</h2>
+        <p>The Fisker Karma is a cutting-edge electric vehicle that combines style, performance, and sustainability.</p>
+        <a href="learn_more.html" class="btn btn-warning mt-3">Learn More</a>
+    </section>
+
+    <section class="py-5 bg-light">
+        <h2 class="text-center">Our Models</h2>
+        <div class="mt-4">
+            <div class="card mb-4">
+                <img class="card-img-top" src="img/model1.jpg" alt="Fisker Model 1">
+                <div class="card-body text-center">
+                    <h3 class="card-title"><a href="modelsg.html#Fisker Karma" class="text-black text-decoration-none">Model 1</a></h3>
+                    <p class="card-text">A sleek and eco-friendly sedan.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <div class="card mb-4">
+                <img class="card-img-top" src="img/model2.jpg" alt="Fisker Model 2">
+                <div class="card-body text-center">
+                    <h3 class="card-title"><a href="modelsg.html#Fisker SUV" class="text-black text-decoration-none">Model 2</a></h3>
+                    <p class="card-text">A powerful electric SUV.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <div class="card mb-4">
+                <img class="card-img-top" src="img/model3.jpg" alt="Fisker Model 3">
+                <div class="card-body text-center">
+                    <h3 class="card-title"><a href="modelsg.html#Fisker Pear" class="text-black text-decoration-none">Model 3</a></h3>
+                    <p class="card-text">The Fisker PEAR is an Agile City EV: the future of clean and affordable individual mobility for cities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <div class="card mb-4">
+                <img class="card-img-top" src="img/model4.jpg" alt="Fisker Model 4">
+                <div class="card-body text-center">
+                    <h3 class="card-title"><a href="modelsg.html#Fisker Alaska" class="text-black text-decoration-none">Model 4</a></h3>
+                    <p class="card-text">The Fisker Alaska is a highly advanced, all-electric, four-door pickup truck that is incredibly versatile and powerful.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <div class="card mb-4">
+                <img class="card-img-top" src="img/model5.jpg" alt="Fisker Model 5">
+                <div class="card-body text-center">
+                    <h3 class="card-title"><a href="modelsg.html#Fisker Ronin" class="text-black text-decoration-none">Model 5</a></h3>
+                    <p class="card-text">The Fisker Ronin is the world’s first all-electric, four-door convertible GT sports car.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section id="gallery" class="py-5">
+        <div class="row">
+            <h2 class="text-center">Gallery</h2>
+            <div class="col-md-6">
+                <!-- Carousel -->
+                <div id="car_gallery" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#car_gallery" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#car_gallery" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#car_gallery" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#car_gallery" data-bs-slide-to="3"></button>
+                    </div>                
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/galex1.jpg" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/gal2.webp" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/gal3.jpeg" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/galex2.jpg" class="d-block" style="width:100%">
+                        </div>
+                    </div>                
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#car_gallery" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#car_gallery" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+                <h2 class="text-center">Exterior</h2>
+            </div>
+    
+            <div class="col-md-6">            
+                <!-- Carousel -->
+                <div id="salon_gallery" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#salon_gallery" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#salon_gallery" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#salon_gallery" data-bs-slide-to="2"></button>
+                    </div>
+                    
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/gal1.jpeg" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/galin1.jpg" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/galin2.jpg" class="d-block" style="width:100%">
+                        </div>
+                    </div>
+                    
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#salon_gallery" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#salon_gallery" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+                <h2 class="text-center">Interior</h2>        
+            </div>
+        </div>         
+    </section>
+
+    <!--FOOTER!!!-->
+    <footer id="Contact" class="container-fluid my-5 bg-dark text-white text-center p-3 mb-0">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>About Fisker</h4>
+                <p class="text-white">Henrik Fisker’s commitment to beauty, innovation, and clean mobility drives us at Fisker Inc.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Contact Info</h4>
+                <ul style="list-style-type: none;" class=" txt2">
+                    <li >Address: Mangilik El 55/11<br>EXPO, C1</li>
+                    <li >Phone: +7(777)77777</li>
+                    <li >Email: info@astanait.edu.kz</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Important Links</h4>
+                <ul style="list-style-type: none;" class="txt2">
+                    <li><a href="https://www.fiskerinc.com" class="text-white">Official page</a></li>
+                    <li><a href="https://www.fiskerinc.com/fiskerapp" class="text-white">Fisker App</a></li>
+                    <li><a href="https://www.instagram.com/fiskerinc/" class="text-white">Instagram</a></li>
+                    <li><a href="firstpage.html" class="text-white">First page</a></li>
+                </ul>                
+            </div>
+            <p>&copy; 2023 Fisker Karma. All rights reserved.</p>
+        </div>        
+    </footer>
+
+    <!-- <script src="https://kit.fontawesome.com/4a35b6f7dc.js" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+
+
+</body>
+</html>
