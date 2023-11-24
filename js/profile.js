@@ -1,7 +1,12 @@
-// Функция для загрузки данных профиля из localStorage
+// Function to get information about the currently logged-in user
+function getLoggedInUser() {
+    return localStorage.getItem("loggedInUser");
+}
+
 function loadProfile() {
     var users = JSON.parse(localStorage.getItem("users")) || [];
-    var loggedInUser = users[users.length - 1]; // Последний добавленный пользователь (последний зарегистрированный)
+    var loggedInUserEmail = getLoggedInUser();
+    var loggedInUser = users.find(u => u.email === loggedInUserEmail);
     var profileInfo = document.getElementById("profileInfo");
 
     if (loggedInUser) {
@@ -13,17 +18,17 @@ function loadProfile() {
             <p><strong>Gender:</strong> ${loggedInUser.gender}</p>
         `;
     } else {
-        // Пользователь не найден, может потребоваться перенаправление на страницу входа
-        // window.location.href = "C:\\Users\\daniy\\OneDrive\\Рабочий стол\\web\\bootstrap\\signin.html";
+        // Redirect to the login page if no user is logged in
+        window.location.href = "signin.html";
     }
 }
 
-// Функция для выхода из учетной записи (удаления данных из localStorage)
+// Function to log out (clear information about the logged-in user)
 function logout() {
+    localStorage.removeItem("loggedInUser");
     alert("Logged out successfully!");
-    // Перенаправление на страницу входа
+    // Redirect to the login page
     window.location.href = "signin.html";
 }
 
-// Загрузка данных профиля при загрузке страницы
 window.onload = loadProfile;

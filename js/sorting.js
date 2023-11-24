@@ -1,7 +1,7 @@
 // Function to sort models by name
 function sortModelsByName() {
     // Get all model sections
-    const modelSections = document.querySelectorAll('.container.d-flex.align-items-center.justify-content-between');
+    const modelSections = document.querySelectorAll('.ourmodels');
 
     // Convert the NodeList to an array
     const modelArray = Array.from(modelSections);
@@ -22,15 +22,15 @@ function sortModelsByName() {
 // Function to sort models by price
 function sortModelsByPrice() {
     // Get all model sections
-    const modelSections = document.querySelectorAll('.container.d-flex.align-items-center.justify-content-between');
+    const modelSections = document.querySelectorAll('.ourmodels');
 
     // Convert the NodeList to an array
     const modelArray = Array.from(modelSections);
 
     // Sort the array by model price
     modelArray.sort((a, b) => {
-        const priceA = parseInt(a.querySelector('table tr:nth-child(5) td:nth-child(2)').textContent.replace(/\D/g, ''));
-        const priceB = parseInt(b.querySelector('table tr:nth-child(5) td:nth-child(2)').textContent.replace(/\D/g, ''));
+        const priceA = parseInt(a.querySelector('.price').textContent.replace(/\D/g, ''));
+        const priceB = parseInt(b.querySelector('.price').textContent.replace(/\D/g, ''));
         return priceA - priceB;
     });
 

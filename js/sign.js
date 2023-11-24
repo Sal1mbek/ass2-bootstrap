@@ -1,3 +1,8 @@
+// Function to store information about the currently logged-in user
+function setLoggedInUser(email) {
+    localStorage.setItem("loggedInUser", email);
+}
+
 function signIn() { 
     var email = document.getElementById("email").value; 
     var password = document.getElementById("password").value; 
@@ -7,6 +12,9 @@ function signIn() {
 
     if (user) {
         alert("Sign in successful!");
+
+        setLoggedInUser(user.email);
+
         if (user.email === "admin2023@gmail.com" && user.password === "@Dmin2023") {
             window.location.href = "admin.html";
         } else {
