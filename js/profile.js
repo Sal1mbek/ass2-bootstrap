@@ -26,6 +26,7 @@ function loadProfile() {
 // Function to log out (clear information about the logged-in user)
 function logout() {
     localStorage.removeItem("loggedInUser");
+    localStorage.removeItem("loggedInUsername")
     alert("Logged out successfully!");
     // Redirect to the login page
     window.location.href = "signin.html";

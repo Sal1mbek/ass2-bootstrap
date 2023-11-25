@@ -1,19 +1,25 @@
-// Function to store information about the currently logged-in user
 function setLoggedInUser(email) {
     localStorage.setItem("loggedInUser", email);
 }
 
-function signIn() { 
-    var email = document.getElementById("email").value; 
-    var password = document.getElementById("password").value; 
+function setLoggedInUsername(username) {
+    localStorage.setItem("loggedInUsername", username);
+}
 
-    var users = JSON.parse(localStorage.getItem("users")) || []; 
-    var user = users.find(u => u.email === email && u.password === password); 
+
+function signIn() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var passwordError = document.getElementById("passwordError");
+
+    var users = JSON.parse(localStorage.getItem("users")) || [];
+    var user = users.find(u => u.email === email && u.password === password);
 
     if (user) {
         alert("Sign in successful!");
 
         setLoggedInUser(user.email);
+        setLoggedInUsername(user.firstName)
 
         if (user.email === "admin2023@gmail.com" && user.password === "@Dmin2023") {
             window.location.href = "admin.html";
@@ -21,9 +27,11 @@ function signIn() {
             window.location.href = "main_pageg.html";
         }
     } else {
-        alert("Invalid email or password. Please try again.");
+        passwordError.textContent = "Invalid email or password. Please try again.";
+        //alert("Invalid email or password. Please try again.");
     }
 }
+
 
 function signUp() {
     var firstName = document.getElementById("firstName").value;
@@ -44,7 +52,7 @@ function signUp() {
         window.location.href = "signin.html";
 
     } else {
-        alert("Password does not meet the requirements. Please ensure it is at least 8 characters long and includes at least 1 uppercase letter, 1 digit, and 1 special character (#, @, &, $, !).");
+        passwordError.textContent = "Password does not meet the requirements. Please ensure it is at least 8 characters long and includes at least 1 uppercase letter, 1 digit, and 1 special character (#, @, &, $, !).";
     }
 }
 
